@@ -81,7 +81,7 @@ class modified_output(multiprocessing.Process):
                 # which will block until next item is available. Otherwise, would return
                 # an Empty exception as soon as nothing is availableself.
                 # Docs: https://docs.python.org/3/library/queue.html
-                event = self._bq.get(True,timeout=5.0)
+                event = self._bq.get(True)
                 waiting_command = True
             except:
                 running = False
